@@ -1,0 +1,92 @@
+.common-btn{
+  background-color: #111430;
+  color: white;
+  padding: 8px 30px;
+}
+.brand-text{
+  color: #111430;
+}
+.common-btn:hover{
+  background-color: #59af59;
+  color: white;
+}
+.active{
+  font-weight: 700;
+  position: relative;
+}
+
+
+.nav-item{
+  font-weight: 600;
+}
+.nav-link{
+  position: relative;
+}
+
+.active > .nav-link::before,
+.nav-link:hover::before{
+  content: '';
+  width: 100%;
+  height: 3px;
+  bottom: 0;
+  position: absolute;
+  left: 0;
+  display: block;
+  background-color:#59af59;
+}
+.header-bg{
+  position: relative;
+  margin-bottom: 200px;
+}
+.header-bg::before{
+  content: ""; 
+  width: 100%; 
+  height: 110vh; 
+  position: absolute; 
+  top: -100px; 
+  right: 0; 
+  transform: skewY(-3deg); 
+  background-color: #FBD062;
+}
+.footer{
+  background-color: #FBD062;
+}
+.card{
+  /* height: 20px;
+  width: 300px; */
+  transition: all linear .41s;
+}
+.card:hover{
+  box-shadow: 10px 10px 51px -13px rgba(0,0,0,0.28);
+  transform: scale(1.1);
+}
+span{
+  color: #7AB259;
+}
+.works{
+  background-color: #111430;
+  height: 100vh;
+}
+.carousel-indicators > li{
+  background-color: red;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+}
+.carouselCard{
+color: wheat;
+width: 100;
+height: 400px;
+margin: 0 20px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.feedback{
+  background-color: #e5e5e5;
+  height: 100vh;
+}
+.brcpxa{
+  background-color: #FBD062 !important;
+  box-shadow: none !important;
+}
