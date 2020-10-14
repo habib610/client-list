@@ -64,13 +64,51 @@
 .card1{
   /* height: 20px;
   width: 300px; */
-  transition: all linear .41s;
+  transition: all linear 2s;
   cursor: pointer;
 }
-.card1:hover{
+.card1:hover .card-body {
+  animation-name: example;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  /* animation-iteration-count: infinite; */
+  animation-delay: .2s;
+  animation-direction: alternate;
+
+}
+
+@keyframes example {
+  0%
+  {
+    transform: scale( .80 );
+  }
+  20%
+  {
+    transform: scale( 1 ) ;
+  }
+  40%
+  {
+    transform:  rotateY(-50deg);
+  }
+  60%
+  {
+    transform: scale( .75 );
+  }
+  80%
+  {
+    transform: scale( .90 ) rotateY(0);
+  }
+  100%
+  {
+    transform: scale( .75 );
+  }
+}
+
+
+/* .card1:hover{
   box-shadow: 10px 10px 51px -13px rgba(0,0,0,0.28);
   transform: scale(1.1);
-}
+} */
 span{
   color: #7AB259;
 }

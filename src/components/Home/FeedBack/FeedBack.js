@@ -22,7 +22,7 @@ const FeedBack = () => {
             <div className="container ">
                 <div className="row my-5">
                     <div className="col-md-12 text-center">
-                        <h2 className="brand-text mb-5">Clients<span>Feedback</span> </h2>
+                        <h2 className="brand-text mb-5">Clients <span>Feedback</span> </h2>
                     </div>
                     {
                         customerInfo.map(customer => <FeedBackCard info={customer} key={customer.id}></FeedBackCard>)
