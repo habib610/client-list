@@ -47,15 +47,16 @@ function App() {
         <Route path="/review">
         <Review></Review>
         </Route>
-        <PrivateRoute path="/admindashboard">
+        <PrivateRoute path="/adminDashboard">
         <AdminDashBoard></AdminDashBoard>
         </PrivateRoute>
         <PrivateRoute path="/addService">
         <RequestedService></RequestedService>
         </PrivateRoute>
-        <PrivateRoute path="/makeAdimin">
+        <PrivateRoute path="/makeAdmin">
         <MakeAdmin></MakeAdmin>
         </PrivateRoute>
+  
         <Route path="*">
         <NotFound></NotFound>
         </Route>

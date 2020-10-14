@@ -2,6 +2,7 @@ import React from 'react';
 import { useContext } from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
+import Loader from 'react-loader-spinner';
 import { UserContext } from '../../App';
 import InfoHeader from '../InfoHeader/InfoHeader';
 import Sidebar from '../Sidebar/Sidebar';
@@ -29,7 +30,7 @@ const servicesTaken =[
 const ServiceList = () => {
     const headerMiddleInfo = "Order";
     const [loggedInUser] = useContext(UserContext); //for filtering specific user
-    const [takenService, setTakenService] = useState(servicesTaken);
+    const [takenService, setTakenService] = useState([]);
 
     console.log(takenService);
     // takenServices
@@ -46,6 +47,14 @@ const ServiceList = () => {
             <div className="col-md-10">
                 <div style={{background: '#C6FFE0', height: '100%'}}>
                 <div className="row">
+                <div className="col-md-12 bg-light d-flex-justify-content-center">
+             {   takenService.length === 0 &&<Loader
+                type="Puff"
+                color="#111430"
+                height={100}
+                width={100}
+              />}
+              </div>
                     {
                         takenService.map(service => <OrderCard key={service.id} service={service}></OrderCard>)
                     }

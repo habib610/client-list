@@ -9,7 +9,7 @@ const AdminSideBar = () => {
 
         <div className="d-flex justify-content-evenly align-items-center my-3">
         <FontAwesomeIcon icon={faHdd}className="mx-2 fa-lg " />
-        <Link to="/admindashboard" className="text-dark">Service List</Link>
+        <Link to="/adminDashboard" className="text-dark">Service List</Link>
         </div>
         <div className="d-flex justify-content-evenly align-items-center my-3">
         <FontAwesomeIcon icon={faPlus}className="mx-2 fa-lg" />
@@ -17,7 +17,7 @@ const AdminSideBar = () => {
         </div>
         <div className="d-flex justify-content-evenly align-items-center my-3">
         <FontAwesomeIcon icon={faUserPlus}className="mx-2 fa-lg" />
-        <Link to="/makeAdimin" className="text-dark">Make Admin</Link>
+        <Link to="/makeAdmin" className="text-dark">Make Admin</Link>
         </div>
     </div>
     );
