@@ -10,7 +10,7 @@ const MakeAdmin = () => {
                 <InfoHeader info={headerMiddleInfo}/>
                 <div className="row no-gutters">
                         <AdminSideBar></AdminSideBar>
-                    <div className="col-md-10">
+                    <div className="col-md-12">
                         <div style={{background: '#C6FFE0', height: '92vh'}}>
                         <MakeAdminForm></MakeAdminForm>
                         </div>

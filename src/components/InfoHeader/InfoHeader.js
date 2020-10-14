@@ -15,12 +15,12 @@ const InfoHeader = ({info}) => {
             <div className="col-md-2">
                 <img onClick={goHome} src={Logo} className="w-50 img-fluid" alt=""/>
             </div>
-            <div className="col-md-8">
+            <div className="col-md-7">
             <h4>{info}</h4>
             </div>
-            <div className="col-md-2">
+            <div className="col-md-3 d-flex align-items-center justify-content-center">
+    <img src={loggedInUser.userphoto} style={{width: '30px', height:'30px'}} className="img-fluid rounded-circle mx-2" alt=""/>
     <h5>{loggedInUser.name}</h5>
-    <img src={loggedInUser.userphoto} className="w-25 img-fluid rounded-circle" alt=""/>
             </div>
         </div>
     );

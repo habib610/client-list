@@ -18,7 +18,7 @@ const OrderForm = ({projectName}) => {
     }
 
 
-    const onSubmit = data => {
+    const onSubmit = (data, e) => {
 
       data.status = "Pending";
       data.icon = icon;
@@ -31,6 +31,7 @@ const OrderForm = ({projectName}) => {
       .then(res=>{
           if(res){
               alert("Order Request Sent Successfully!")
+              e.target.reset();
           }
       })
     };

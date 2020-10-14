@@ -5,8 +5,10 @@ import { faCloudUploadAlt } from '@fortawesome/free-solid-svg-icons';
 
 const AddService = () => {
     const { register, handleSubmit, errors } = useForm();
-    const onSubmit = data => {
+    const onSubmit = (data, e) => {
         console.log(data);
+
+        e.target.reset();
     }
     return (
         <div className="row">
@@ -31,10 +33,9 @@ const AddService = () => {
                         <div className="col-md-4 ">
                             <div className="form-group">
                                 <p style={{fontWeight:"700"}}>Icon</p>
-                                <label for="file" className="imageUpload" >   <FontAwesomeIcon icon={faCloudUploadAlt} className="mx-2 fa-lg " /> Choose File </label>
+                                <label htmlFor="file" className="imageUpload" >   <FontAwesomeIcon icon={faCloudUploadAlt} className="mx-2 fa-lg " /> Choose File </label>
                                 <input name="file" type="file" accept="image/*" id="file" ref={register({ required: true })} className="form-control display-none" placeholder="File" /> <br />
-                      
-                                {errors.tel && <span className="text-danger ">Image required</span>}
+                                {errors.file && <span className="text-danger ">Image required</span>}
                             </div>
                         </div>
                     </div>
@@ -43,7 +44,7 @@ const AddService = () => {
 
 
 
-                    <input type="submit" className="btn common-btn my-4" />
+                    <input type="submit" className="btn adminBtn my-4" />
                 </form>
             </div>
         </div>

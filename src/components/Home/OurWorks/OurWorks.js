@@ -1,10 +1,6 @@
 import React from 'react';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 
-
-import Carousel1 from './../../../images/carousel-1.png';
-import Carousel2 from './../../../images/carousel-2.png';
-import Carousel3 from './../../../images/carousel-3.png';
 import CarouselComponents from '../CarouselComponents/CarouselComponents';
 import Carousel from 'react-elastic-carousel';
 const OurWorks = () => {

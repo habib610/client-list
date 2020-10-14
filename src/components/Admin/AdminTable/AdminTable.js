@@ -1,13 +1,18 @@
 import React from 'react';
 
-const AdminTable = () => {
+const AdminTable = ({user}) => {
+    const {name, email, work, detail, status} = user;
     return (
-        <div className="row text-dark text-center ml-2">
-            <div className="col-xs-2 col-sm-2 col-md-2 py-3"><p>Habib</p></div>
-            <div className="col-xs-2 col-sm-2 col-md-2 py-3"><p>Habib</p></div>
-            <div className="col-xs-2 col-sm-2 col-md-2 py-3"><p>Habib</p></div>
-            <div className="col-xs-2 col-sm-2 col-md-2 py-3"><p>Habib</p></div>
-            <div className="col-xs-2 col-sm-2 col-md-2 py-3"><p>Habib</p></div>
+        <div className="row text-dark  px-2">
+            <div className="col-xs-2 col-sm-2 col-md-2 my-2 pl-2"><p>{name}</p></div>
+            <div className="col-md-4"><p>{email}</p></div>
+            <div className="col-xs-2 col-sm-2 col-md-2 my-2"><p>{work}</p></div>
+            <div className="col-xs-2 col-sm-2 col-md-2 my-2"><p>{detail}</p></div>
+            <div className="col-xs-2 col-sm-2 col-md-2 my-2"><select className={`${status}`}>
+    <option value="" >{status==="Pending"?"Pending":"Done" }</option>
+    <option value="">{status==="Pending"?"Done":"Pending" }</option>
+                </select></div>
+            {/* <div className="col-xs-2 col-sm-2 col-md-2 my-2"><p className={`${status}`}>{status}</p></div> */}
         </div>
     );
 };

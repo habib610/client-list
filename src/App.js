@@ -38,24 +38,24 @@ function App() {
         <PrivateRoute path="/order/:projectName">
         <Order></Order>
         </PrivateRoute>
-        <Route path="/orderDashboard">
+        <PrivateRoute path="/orderDashboard">
         <Order></Order>
-        </Route>
-        <Route path="/serviceList">
+        </PrivateRoute>
+        <PrivateRoute path="/serviceList">
         <ServiceList></ServiceList>
-        </Route>
+        </PrivateRoute>
         <Route path="/review">
         <Review></Review>
         </Route>
-        <Route path="/admindashboard">
+        <PrivateRoute path="/admindashboard">
         <AdminDashBoard></AdminDashBoard>
-        </Route>
-        <Route path="/addService">
+        </PrivateRoute>
+        <PrivateRoute path="/addService">
         <RequestedService></RequestedService>
-        </Route>
-        <Route path="/makeAdimin">
+        </PrivateRoute>
+        <PrivateRoute path="/makeAdimin">
         <MakeAdmin></MakeAdmin>
-        </Route>
+        </PrivateRoute>
         <Route path="*">
         <NotFound></NotFound>
         </Route>

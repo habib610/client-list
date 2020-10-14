@@ -10,7 +10,7 @@ const [loggedInUser] = useContext(UserContext);
 
 
     const { register, handleSubmit, errors } = useForm();
-    const onSubmit = data => {
+    const onSubmit = (data, e)=> {
       console.log(data);
       data.userphoto = loggedInUser.userphoto;
 
@@ -21,7 +21,8 @@ const [loggedInUser] = useContext(UserContext);
     })
     .then(res=>{
         if(res){
-            alert("Review Posted Successfully!")
+            alert("Review Posted Successfully!");
+            e.target.reset();
         }
     })
 

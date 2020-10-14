@@ -1,6 +1,5 @@
 import React from 'react';
 import InfoHeader from '../InfoHeader/InfoHeader';
-import OrderForm from '../Order/OrderForm/OrderForm';
 import Sidebar from '../Sidebar/Sidebar';
 import ReviewForm from './ReviewForm/ReviewForm';
 
