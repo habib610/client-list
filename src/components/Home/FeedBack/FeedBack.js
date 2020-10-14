@@ -13,14 +13,14 @@ const CustomerInfo = [
         details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus commodo ipsum duis laoreet maecenas. Feugiat "
     },
     {
-        id: 1,
+        id: 2,
         avatar: Customer2,
         name: "Meraiam Barron",
         designation: "CEO, Manpal",
         details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus commodo ipsum duis laoreet maecenas. Feugiat "
     },
     {
-        id: 1,
+        id: 3,
         avatar: Customer3,
         name: "Bria Malone",
         designation: "CEO, Manpla",

@@ -1,0 +1,36 @@
+.login{
+    height: 100vh;
+    background-color: #e5e5e5;
+}
+.login-box{
+    border: 1px solid #C7C7C7;
+    background-color: white;
+    padding: 20px 30px;
+    margin-top: 20px;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+button.login-container:focus{
+    outline: none;
+}
+button.login-container:active{
+    box-shadow: 1px 1px 5px black;
+    margin-bottom: 10px;
+}
+.googleIcon{
+    height: 40px;
+    width: 40px;
+}
+.login-container{
+   height: 50px;
+   width: 400px;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   border-radius: 50px;
+   border: 2px solid #C7C7C7;
+   background-color: transparent;
+}

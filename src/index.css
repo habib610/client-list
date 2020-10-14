@@ -11,3 +11,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.sidebar a{
+  font-weight: 600;
+  color: #59af59 !important;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+label{
+  font-weight: 700;
+}
