@@ -5,6 +5,7 @@ import {  faCloudUploadAlt } from '@fortawesome/free-solid-svg-icons';
 
 const OrderForm = ({projectName}) => {
     const { register, handleSubmit, errors } = useForm();
+    
     const onSubmit = data => {
       console.log(data);
     };
@@ -41,8 +42,7 @@ const OrderForm = ({projectName}) => {
 
     <div className="col-6 offset-2">
         <label htmlFor="file" className="imageUpload" >   <FontAwesomeIcon icon={faCloudUploadAlt}className="mx-2 fa-lg " /> Choose File </label>
-    <input   name="file" type="file" accept="image/*" id="file" ref={register({ required: true })} className="form-control display-none" placeholder="File" /> <br />
-    {errors.tel && <span className="text-danger">Image required</span>}
+    <input   name="file" type="file" accept="image/*" id="file"  className="form-control display-none" placeholder="File" /> <br />
     </div>
 
 </div>

@@ -36,7 +36,7 @@ const Login = () => {
     }
     return (
         <div className="container-fluid">
-            <h1>Name: {loggedInUser.email}</h1>
+
             <div style={{ height: '100vh', width: '100vw' }} className="row login text-center justify-content-center align-items-center">
                 <div className="col-md-5 ">
                     <img className="img-fluid w-25" src={Logo} alt="" />

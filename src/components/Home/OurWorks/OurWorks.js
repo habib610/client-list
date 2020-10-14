@@ -21,6 +21,18 @@ const OurWorks = () => {
             id: 3,
             image: Carousel3
         },
+        {
+            id: 4,
+            image: Carousel1
+        },
+        {
+            id: 5,
+            image: Carousel2
+        },
+        {
+            id: 6,
+            image: Carousel3
+        },
     ]
     return (
         <section className="works py-5">
@@ -28,7 +40,7 @@ const OurWorks = () => {
                 <div className="row my-5">
                     <div className="col-md-12 text-center">
                         <h2 className="text-white mb-5">Here are our <span >Services</span> </h2>
-                        <Carousel itemsToShow={1} infiniteLoop>
+                        <Carousel itemsToScroll={1} showArrows={false} itemsToShow={3} enableAutoPlay={true} >
 
                             {
                                 cardImages.map(item => <CarouselComponents key={item.id} item={item}></CarouselComponents>)
