@@ -11,27 +11,27 @@ const OurWorks = () => {
     const cardImages = [
         {
             id: 1,
-            image: Carousel1
+            image: "https://iili.io/2tmhrP.md.png"
         },
         {
             id: 2,
-            image: Carousel2
+            image: "https://iili.io/2tmw21.md.png"
         },
         {
             id: 3,
-            image: Carousel3
+            image:"https://iili.io/2tmvTJ.md.png"
         },
         {
             id: 4,
-            image: Carousel1
+            image: "https://iili.io/2tmNYF.md.png"
         },
         {
             id: 5,
-            image: Carousel2
+            image: "https://iili.io/2DCTqF.md.png"
         },
         {
             id: 6,
-            image: Carousel3
+            image: "https://iili.io/2tmw21.md.png"
         },
     ]
     return (
@@ -40,7 +40,7 @@ const OurWorks = () => {
                 <div className="row my-5">
                     <div className="col-md-12 text-center">
                         <h2 className="text-white mb-5">Here are our <span >Services</span> </h2>
-                        <Carousel itemsToScroll={1} showArrows={false} itemsToShow={3} enableAutoPlay={true} >
+                        <Carousel   itemsToShow={3} enableAutoPlay={true} >
 
                             {
                                 cardImages.map(item => <CarouselComponents key={item.id} item={item}></CarouselComponents>)

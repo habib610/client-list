@@ -2,11 +2,29 @@ import React from 'react';
 import { useForm } from "react-hook-form";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {  faCloudUploadAlt } from '@fortawesome/free-solid-svg-icons';
+import { useContext } from 'react';
+import { UserContext } from '../../../App';
 
 const ReviewForm = () => {
+const [loggedInUser] = useContext(UserContext);
+
+
     const { register, handleSubmit, errors } = useForm();
     const onSubmit = data => {
       console.log(data);
+      data.userphoto = loggedInUser.userphoto;
+
+      fetch('http://localhost:5000/takeReview',{
+        method: "POST",
+        headers:{'Content-Type': 'application/json'},
+        body: JSON.stringify(data)
+    })
+    .then(res=>{
+        if(res){
+            alert("Review Posted Successfully!")
+        }
+    })
+
     };
     return (
         <div className="row">
@@ -21,7 +39,7 @@ const ReviewForm = () => {
 
 
 < div className="form-group my-0">
-    <input type="text" name="designation" ref={register({ required: true })} className="form-control" placeholder="Your Email Address" /> <br />
+    <input type="text" name="designation" ref={register({ required: true })} className="form-control" placeholder="Your Designation" /> <br />
     {errors.designation && <span className="text-danger">Designation is required</span>}
 </div>
 

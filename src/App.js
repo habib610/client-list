@@ -38,6 +38,9 @@ function App() {
         <PrivateRoute path="/order/:projectName">
         <Order></Order>
         </PrivateRoute>
+        <Route path="/orderDashboard">
+        <Order></Order>
+        </Route>
         <Route path="/serviceList">
         <ServiceList></ServiceList>
         </Route>

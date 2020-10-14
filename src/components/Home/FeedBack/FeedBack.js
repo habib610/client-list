@@ -1,35 +1,22 @@
 import React from 'react';
+import { useEffect } from 'react';
+import { useState } from 'react';
 import FeedBackCard from '../FeedBackCard/FeedBackCard';
-import Customer1 from './../../../images/customer-1.png';
-import Customer2 from './../../../images/customer-2.png';
-import Customer3 from './../../../images/customer-3.png';
 
-const CustomerInfo = [
-    {
-        id: 1,
-        avatar: Customer1,
-        name: "Nash Patrik",
-        designation: "CEO, Manpal",
-        details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus commodo ipsum duis laoreet maecenas. Feugiat "
-    },
-    {
-        id: 2,
-        avatar: Customer2,
-        name: "Meraiam Barron",
-        designation: "CEO, Manpal",
-        details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus commodo ipsum duis laoreet maecenas. Feugiat "
-    },
-    {
-        id: 3,
-        avatar: Customer3,
-        name: "Bria Malone",
-        designation: "CEO, Manpla",
-        details: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus commodo ipsum duis laoreet maecenas. Feugiat "
-    }
-]
+
+
 
 
 const FeedBack = () => {
+    const [customerInfo, setCustomerInfo] = useState([]);
+
+    useEffect(()=>{
+        fetch(`http://localhost:5000/getReviews`)
+        .then(res=>res.json())
+        .then(data => setCustomerInfo(data))
+    },[])
+
+
     return (
         <section className="feedback py-5">
             <div className="container ">
@@ -38,7 +25,7 @@ const FeedBack = () => {
                         <h2 className="brand-text mb-5">Clients<span>Feedback</span> </h2>
                     </div>
                     {
-                        CustomerInfo.map(customer => <FeedBackCard info={customer} key={customer.id}></FeedBackCard>)
+                        customerInfo.map(customer => <FeedBackCard info={customer} key={customer.id}></FeedBackCard>)
                     }
                 </div>
             </div>

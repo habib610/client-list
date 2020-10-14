@@ -2,13 +2,41 @@ import React from 'react';
 import { useForm } from "react-hook-form";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {  faCloudUploadAlt } from '@fortawesome/free-solid-svg-icons';
+import { useContext } from 'react';
+import { UserContext } from '../../../App';
+import fakeData from '../../fakeData/fakeData';
 
 const OrderForm = ({projectName}) => {
     const { register, handleSubmit, errors } = useForm();
-    
+
+    const [loggedInUser] = useContext(UserContext);
+
+    let icon = 'https://iili.io/2tmDQ4.png';
+    if(projectName !== undefined){
+        const imageUrl =   fakeData.find(project => project.name === projectName);
+         icon = imageUrl.icon;
+    }
+
+
     const onSubmit = data => {
-      console.log(data);
+
+      data.status = "Pending";
+      data.icon = icon;
+
+      fetch('http://localhost:5000/takeOrder',{
+          method: "POST",
+          headers:{'Content-Type': 'application/json'},
+          body: JSON.stringify(data)
+      })
+      .then(res=>{
+          if(res){
+              alert("Order Request Sent Successfully!")
+          }
+      })
     };
+
+
+
     return (
         <div className="row">
             <div className="col-md-8">
@@ -20,7 +48,7 @@ const OrderForm = ({projectName}) => {
     {errors.name && <span className="text-danger">Name is required</span>}
 </div>
 < div className="form-group my-0">
-    <input type="email" name="email" ref={register({ required: true })} className="form-control" placeholder="Your Email Address" /> <br />
+    <input type="email" name="email" value={loggedInUser.email} ref={register({ required: true })} className="form-control" placeholder="Your Email Address" /> <br />
     {errors.email && <span className="text-danger">Email is required</span>}
 </div>
 < div className="form-group my-0">

@@ -14,7 +14,7 @@ const Order = () => {
             <div className="row no-gutters">
                     <Sidebar></Sidebar>
                 <div className="col-md-10">
-                    <div style={{background: '#C6FFE0', height: '92vh'}}>
+                    <div style={{background: '#C6FFE0', height: '100vh'}}>
                     <OrderForm projectName={projectName}></OrderForm>
                     </div>
                 </div>

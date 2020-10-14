@@ -24,10 +24,11 @@ const Login = () => {
             .signInWithPopup(googleProvider)
             .then(result => {
 
-                const { displayName, email } = result.user;
+                const { displayName, email, photoURL } = result.user;
                 const signInUserInfo = {
                     name: displayName,
-                    email: email
+                    email: email,
+                    userphoto: photoURL
                 }
                 setLoggedInUser(signInUserInfo);
                 history.replace(from);
