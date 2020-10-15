@@ -7,16 +7,14 @@ const RequestedService = () => {
     const headerMiddleInfo = "Add Services"
     return (
         <div className="container-fluid">
-            <InfoHeader info={headerMiddleInfo}/>
-            <div className="row no-gutters">
-                    <AdminSideBar></AdminSideBar>
-                <div className="col-md-10">
-                    <div style={{background: '#C6FFE0', height: '92vh'}}>
-                    <AddService></AddService>
-                    </div>
-                </div>
+        <InfoHeader info={headerMiddleInfo} />
+        <div className="row no-gutters">
+            <AdminSideBar></AdminSideBar>
+            <div className="col-md-10" style={{ background: '#C6FFE0', height: '100%', }}>
+            <AddService></AddService>
             </div>
         </div>
+    </div>
     );
 };
 

@@ -6,6 +6,7 @@ import MakeAdminForm from '../MakeAdminForm/MakeAdminForm';
 const MakeAdmin = () => {
         const headerMiddleInfo = "Make Admin";
         return (
+            <>
             <div className="container-fluid">
                 <InfoHeader info={headerMiddleInfo}/>
                 <div className="row no-gutters">
@@ -13,9 +14,11 @@ const MakeAdmin = () => {
                         <div style={{background: '#C6FFE0'}} className="col-md-10">
                         <MakeAdminForm></MakeAdminForm>
                         </div>
-
                 </div>
             </div>
+
+
+            </>
     );
 };
 

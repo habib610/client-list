@@ -1,22 +1,20 @@
 import React from 'react';
+import AdminSideBar from '../Admin/AdminSideBar/AdminSideBar';
 import InfoHeader from '../InfoHeader/InfoHeader';
-import Sidebar from '../Sidebar/Sidebar';
 import ReviewForm from './ReviewForm/ReviewForm';
 
 const Review = () => {
-    const headerMiddleInfo = "Order";
+    const headerMiddleInfo = "Review";
     return (
         <div className="container-fluid">
-            <InfoHeader info={headerMiddleInfo}/>
-            <div className="row no-gutters">
-                    <Sidebar></Sidebar>
-                <div className="col-md-10">
-                    <div style={{background: '#C6FFE0', height: '92vh'}}>
-                    <ReviewForm></ReviewForm>
-                    </div>
-                </div>
+        <InfoHeader info={headerMiddleInfo} />
+        <div className="row no-gutters">
+            <AdminSideBar></AdminSideBar>
+            <div className="col-md-10" style={{ background: '#C6FFE0', height: '100%', }}>
+            <ReviewForm></ReviewForm>
             </div>
         </div>
+    </div>
     );
 };
 

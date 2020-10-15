@@ -3,7 +3,7 @@ import './OrderCard.css'
 const OrderCard = ({service}) => {
     const {icon, detail, name, status} = service;
     return (
-        <div className="col-md-4 my-2 ml-5 py-md-5 d-flex justify-content-center">
+ <div className="col-md-4 my-2 ml-5 py-md-5 d-flex justify-content-center">
             <div className="card ">
                 <div className="card-body">
                     <div className="card-head d-flex justify-content-between align-items-center">
@@ -15,7 +15,9 @@ const OrderCard = ({service}) => {
                 </div>
             </div>
         </div>
+   
     );
+       
 };
 
 export default OrderCard;

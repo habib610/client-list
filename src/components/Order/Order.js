@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
+import AdminSideBar from '../Admin/AdminSideBar/AdminSideBar';
 import InfoHeader from '../InfoHeader/InfoHeader';
-import Sidebar from '../Sidebar/Sidebar';
 import OrderForm from './OrderForm/OrderForm';
 
 const Order = () => {
@@ -10,16 +10,14 @@ const Order = () => {
 
     return (
         <div className="container-fluid">
-            <InfoHeader info={headerMiddleInfo}/>
-            <div className="row no-gutters">
-                    <Sidebar></Sidebar>
-                <div className="col-md-10">
-                    <div style={{background: '#C6FFE0', height: '100vh'}}>
-                    <OrderForm projectName={projectName}></OrderForm>
-                    </div>
-                </div>
+        <InfoHeader info={headerMiddleInfo} />
+        <div className="row no-gutters">
+            <AdminSideBar></AdminSideBar>
+            <div className="col-md-10" style={{ background: '#C6FFE0', height: '100vh', }}>
+            <OrderForm projectName={projectName}></OrderForm>
             </div>
         </div>
+    </div>
     );
 };
 

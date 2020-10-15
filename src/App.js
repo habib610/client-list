@@ -13,11 +13,11 @@ import Login from './components/Login/Login';
 import Order from './components/Order/Order';
 import ServiceList from './components/ServiceList/ServiceList';
 import Review from './components/Review/Review';
-import AdminDashBoard from './components/Admin/AdminDashBoard/AdminDashBoard';
 import RequestedService from './components/Admin/RequestedService/RequestedService';
 import MakeAdmin from './components/Admin/MakeAdmin/MakeAdmin';
-import PrivateRoute from './components/Login/PrivateRoute/PrivateRoute';
 import NotFound from './components/NotFound/NotFound';
+import Dashboard from './components/Dashboard/Dashboard';
+import PrivateRoute from './components/Login/PrivateRoute/PrivateRoute';
 
 export const UserContext = createContext(); 
 function App() {
@@ -35,6 +35,9 @@ function App() {
         <Route path="/login">
       <Login></Login>
         </Route>
+
+
+
         <PrivateRoute path="/order/:projectName">
         <Order></Order>
         </PrivateRoute>
@@ -44,11 +47,8 @@ function App() {
         <PrivateRoute path="/serviceList">
         <ServiceList></ServiceList>
         </PrivateRoute>
-        <Route path="/review">
+        <PrivateRoute path="/review">
         <Review></Review>
-        </Route>
-        <PrivateRoute path="/adminDashboard">
-        <AdminDashBoard></AdminDashBoard>
         </PrivateRoute>
         <PrivateRoute path="/addService">
         <RequestedService></RequestedService>
@@ -56,7 +56,9 @@ function App() {
         <PrivateRoute path="/makeAdmin">
         <MakeAdmin></MakeAdmin>
         </PrivateRoute>
-  
+        <PrivateRoute path="/dashboard">
+        <Dashboard></Dashboard>
+        </PrivateRoute>
         <Route path="*">
         <NotFound></NotFound>
         </Route>
