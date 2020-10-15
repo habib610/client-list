@@ -1,27 +1,46 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from "react-hook-form";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {  faCloudUploadAlt } from '@fortawesome/free-solid-svg-icons';
 import { useContext } from 'react';
 import { UserContext } from '../../../App';
 import fakeData from '../../fakeData/fakeData';
+import { useEffect } from 'react';
 
 const OrderForm = ({projectName}) => {
+    const [services, serServices] = useState([])
+
+    useEffect(()=>{
+        fetch('http://localhost:5000/getService')
+        .then(res=> res.json())
+        .then(data => serServices(data))
+    }, [])
+
+
+// console.log(services)
     const { register, handleSubmit, errors } = useForm();
 
     const [loggedInUser] = useContext(UserContext);
 
-    let icon = 'https://iili.io/2tmDQ4.png';
-    if(projectName !== undefined){
-        const imageUrl =   fakeData.find(project => project.name === projectName);
-         icon = imageUrl.icon;
-    }
+
+const photo = services.find(project => project.title === projectName);
+// console.log(photo)
+
+
+
+
+
+    // if(projectName !== undefined){
+    //     const imageUrl =   services.find(project => project.title === projectName);
+    //     //  icon = imageUrl.image.img;
+    //     console.log(imageUrl)
+    // }
 
 
     const onSubmit = (data, e) => {
 
       data.status = "Pending";
-      data.icon = icon;
+      data.icon = photo;
 
       fetch('http://localhost:5000/takeOrder',{
           method: "POST",

@@ -69,7 +69,7 @@
 }
 .card1:hover .card-body {
   animation-name: example;
-  animation-duration: 1.5s;
+  animation-duration: 1.2s;
   animation-timing-function: ease-out;
   /* animation-iteration-count: infinite; */
   animation-delay: .2s;
@@ -96,11 +96,11 @@
   }
   80%
   {
-    transform: scale( .90 ) rotateY(0);
+    transform: scale( .90 ) ;
   }
   100%
   {
-    transform: scale( .75 );
+    transform: scale( .85 );
   }
 }
 

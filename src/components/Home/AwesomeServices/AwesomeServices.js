@@ -1,21 +1,28 @@
-import React from 'react';
-import fakeData from '../../fakeData/fakeData';
-import Service from '../Service/Service';
+import React, { useEffect, useState } from 'react';
+import AdminUpdatedServices from '../AdminUpdatedServices/AdminUpdatedServices';
 
 
-const allServices = fakeData;
 
 const AwesomeServices = () => {
+    const [services, serServices] = useState([])
+    useEffect(()=>{
+        fetch('http://localhost:5000/getService')
+        .then(res=> res.json())
+        .then(data => serServices(data))
+    }, [])
+
     return (
-        <section className=" py-5">
+        <section className=" my-5 ">
             <div className="container ">
-                <div className="row my-5">
-                    <div className="col-md-12 text-center">
+                <div className="row ">
+                    <div className="col-md-12 text-center my-5">
                         <h2>Provided Awesome <span >Services</span> </h2>
+                       
                     </div>
-                   {
-                       allServices.map(service => <Service key={service.id} service={service}></Service>)
-                   }
+
+                    {
+                            services.map(service => <AdminUpdatedServices key={services._id} service={service}></AdminUpdatedServices>)
+                        }
                 </div>
             </div>
         </section>   

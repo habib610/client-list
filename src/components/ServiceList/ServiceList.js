@@ -20,7 +20,8 @@ const ServiceList = () => {
         fetch(`http://localhost:5000/takenServices?email=${loggedInUser.email}`)
             .then(res => res.json())
             .then(data => setTakenService(data))
-    })
+    },[])
+    console.log(takenService)
     return (
         <div className="container-fluid">
             <InfoHeader info={headerMiddleInfo} />
