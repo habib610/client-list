@@ -7,17 +7,15 @@ import ServiceListHeader from '../ServiceListHeader/ServiceListHeader';
 const AdminDashBoard = () => {
     const [users, serUsers] = useState([]);
 
-    const headerMiddleInfo = "Service List";
+
+
     useEffect(() => {
         fetch('http://localhost:5000/allUsers')
             .then(res => res.json())
             .then(data => serUsers(data))
     }, [])
-
     return (
         <div>
-
-
             <ServiceListHeader></ServiceListHeader>
             {
                 users.length === 0 && <div style={{ height: "95vh" }} className="row d-flex justify-content-center align-items-center">
@@ -28,13 +26,11 @@ const AdminDashBoard = () => {
                         width={100}
                     />
                 </div>
-
             }
             {
-                users.map(user => <AdminTable user={user}></AdminTable>)
+            users.map(user => <AdminTable user={user}></AdminTable>)
             }
         </div>
-
     );
 };
 

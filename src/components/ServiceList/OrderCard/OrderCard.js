@@ -15,7 +15,6 @@ const OrderCard = ({service}) => {
                 </div>
             </div>
         </div>
-   
     );
        
 };

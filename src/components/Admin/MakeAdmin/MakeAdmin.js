@@ -16,8 +16,6 @@ const MakeAdmin = () => {
                         </div>
                 </div>
             </div>
-
-
             </>
     );
 };
