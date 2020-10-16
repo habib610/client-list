@@ -17,7 +17,7 @@ const Dashboard = () => {
         fetch(`http://localhost:5000/getAdmin?email=${loggedInUser.email}`)
         .then(res=> res.json())
         .then(data => setAdmin(data))
-    }, )
+    }, [])
 
     return (
         <div className="container-fluid">

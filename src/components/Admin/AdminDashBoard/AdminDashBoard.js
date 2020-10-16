@@ -28,7 +28,7 @@ const AdminDashBoard = () => {
                 </div>
             }
             {
-            users.map(user => <AdminTable user={user}></AdminTable>)
+            users.map(user => <AdminTable key={user._id} user={user}></AdminTable>)
             }
         </div>
     );

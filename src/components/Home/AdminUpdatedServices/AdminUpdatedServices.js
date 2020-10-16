@@ -3,8 +3,7 @@ import { useHistory } from 'react-router-dom';
 
 const AdminUpdatedServices = ({service}) => {
     const{name, description, title, image} = service;
-    console.log(image)
-    console.log(service);
+
     let history = useHistory();
     const handleCardClicked = ()=>{
         history.push(`/order/${title}`)
