@@ -12,7 +12,7 @@ const AdminTable = ({ user }) => {
         const field = { status };
 
 
-        fetch(`http://localhost:5000/updateStatus/${uniqueKey}`, {
+        fetch(`https://murmuring-everglades-58263.herokuapp.com/updateStatus/${uniqueKey}`, {
             method: "PATCH",
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(field)

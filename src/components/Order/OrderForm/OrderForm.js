@@ -11,7 +11,7 @@ const OrderForm = ({projectName}) => {
     const [services, serServices] = useState([])
 
     useEffect(()=>{
-        fetch('http://localhost:5000/getService')
+        fetch('https://murmuring-everglades-58263.herokuapp.com/getService')
         .then(res=> res.json())
         .then(data => serServices(data))
     }, [])
@@ -42,7 +42,7 @@ const photo = services.find(project => project.title === projectName);
       data.status = "Pending";
       data.icon = photo;
 
-      fetch('http://localhost:5000/takeOrder',{
+      fetch('https://murmuring-everglades-58263.herokuapp.com/takeOrder',{
           method: "POST",
           headers:{'Content-Type': 'application/json'},
           body: JSON.stringify(data)

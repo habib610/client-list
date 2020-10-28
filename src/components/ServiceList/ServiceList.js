@@ -17,7 +17,7 @@ const ServiceList = () => {
 
     // takenServices
     useEffect(() => {
-        fetch(`http://localhost:5000/takenServices?email=${loggedInUser.email}`)
+        fetch(`https://murmuring-everglades-58263.herokuapp.com/takenServices?email=${loggedInUser.email}`)
             .then(res => res.json())
             .then(data => setTakenService(data))
     },[])

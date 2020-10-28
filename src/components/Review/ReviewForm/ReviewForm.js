@@ -12,7 +12,7 @@ const [loggedInUser] = useContext(UserContext);
       console.log(data);
       data.userphoto = loggedInUser.userphoto;
 
-      fetch('http://localhost:5000/takeReview',{
+      fetch('https://murmuring-everglades-58263.herokuapp.com/takeReview',{
         method: "POST",
         headers:{'Content-Type': 'application/json'},
         body: JSON.stringify(data)

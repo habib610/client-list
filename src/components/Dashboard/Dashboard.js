@@ -14,7 +14,7 @@ const Dashboard = () => {
     const [admin, setAdmin] = useState(false);
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/getAdmin?email=${loggedInUser.email}`)
+        fetch(`https://murmuring-everglades-58263.herokuapp.com/getAdmin?email=${loggedInUser.email}`)
         .then(res=> res.json())
         .then(data => setAdmin(data))
     }, [])

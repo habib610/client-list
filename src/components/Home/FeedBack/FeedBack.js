@@ -11,7 +11,7 @@ const FeedBack = () => {
     const [customerInfo, setCustomerInfo] = useState([]);
 
     useEffect(()=>{
-        fetch(`http://localhost:5000/getReviews`)
+        fetch(`https://murmuring-everglades-58263.herokuapp.com/getReviews`)
         .then(res=>res.json())
         .then(data => setCustomerInfo(data))
     },[])

@@ -10,7 +10,7 @@ const AdminDashBoard = () => {
 
 
     useEffect(() => {
-        fetch('http://localhost:5000/allUsers')
+        fetch('https://murmuring-everglades-58263.herokuapp.com/allUsers')
             .then(res => res.json())
             .then(data => serUsers(data))
     }, [])

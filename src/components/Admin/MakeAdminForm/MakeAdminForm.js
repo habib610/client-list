@@ -7,7 +7,7 @@ const MakeAdminForm = () => {
     const onSubmit = (data, e) => {
         console.log(data);
 
-        fetch('http://localhost:5000/makeAdmin',{
+        fetch('https://murmuring-everglades-58263.herokuapp.com/makeAdmin',{
             method: "POST",
             headers:{'Content-Type': 'application/json'},
             body: JSON.stringify(data)

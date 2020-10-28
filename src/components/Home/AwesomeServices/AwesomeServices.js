@@ -6,7 +6,7 @@ import AdminUpdatedServices from '../AdminUpdatedServices/AdminUpdatedServices';
 const AwesomeServices = () => {
     const [services, serServices] = useState([])
     useEffect(()=>{
-        fetch('http://localhost:5000/getService')
+        fetch('https://murmuring-everglades-58263.herokuapp.com/getService')
         .then(res=> res.json())
         .then(data => serServices(data))
     }, [])
