@@ -10,7 +10,7 @@ const Review = () => {
         <InfoHeader info={headerMiddleInfo} />
         <div className="row no-gutters">
             <AdminSideBar></AdminSideBar>
-            <div className="col-md-10" style={{ background: '#C6FFE0', height: '100%', }}>
+            <div className="col-md-10" style={{ background: '#C6FFE0', minHeight: '100%',  }}>
             <ReviewForm></ReviewForm>
             </div>
         </div>

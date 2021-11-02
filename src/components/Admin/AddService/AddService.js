@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-import { useForm } from "react-hook-form";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCloudUploadAlt } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React, { useState } from 'react';
 
 const AddService = () => {
     const [info, setInfo] = useState({});

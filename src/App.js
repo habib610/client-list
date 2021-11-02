@@ -1,29 +1,23 @@
 import React from 'react';
-import './App.css';
 import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-
+  BrowserRouter as Router, Route, Switch
 } from "react-router-dom";
-import { createContext } from 'react';
-import { useState } from 'react';
+import './App.css';
+import MakeAdmin from './components/Admin/MakeAdmin/MakeAdmin';
+import RequestedService from './components/Admin/RequestedService/RequestedService';
+import Dashboard from './components/Dashboard/Dashboard';
 import Home from './components/Home/Home';
 import Login from './components/Login/Login';
-import Order from './components/Order/Order';
-import ServiceList from './components/ServiceList/ServiceList';
-import Review from './components/Review/Review';
-import RequestedService from './components/Admin/RequestedService/RequestedService';
-import MakeAdmin from './components/Admin/MakeAdmin/MakeAdmin';
 import NotFound from './components/NotFound/NotFound';
-import Dashboard from './components/Dashboard/Dashboard';
-import PrivateRoute from './components/Login/PrivateRoute/PrivateRoute';
+import Order from './components/Order/Order';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import Review from './components/Review/Review';
+import ServiceList from './components/ServiceList/ServiceList';
 
-export const UserContext = createContext(); 
+
 function App() {
-  const [loggedInUser, setLoggedInUser] = useState({});
+
   return (
-    <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
       <Router>
         <Switch>
           <Route exact path="/">
@@ -35,8 +29,6 @@ function App() {
         <Route path="/login">
       <Login></Login>
         </Route>
-
-
 
         <PrivateRoute path="/order/:projectName">
         <Order></Order>
@@ -59,12 +51,12 @@ function App() {
         <PrivateRoute path="/dashboard">
         <Dashboard></Dashboard>
         </PrivateRoute>
+
         <Route path="*">
         <NotFound></NotFound>
         </Route>
         </Switch>
       </Router>
-    </UserContext.Provider>
   );
 }
 

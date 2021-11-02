@@ -1,8 +1,8 @@
 import React from 'react';
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-
-import CarouselComponents from '../CarouselComponents/CarouselComponents';
 import Carousel from 'react-elastic-carousel';
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import CarouselComponents from '../CarouselComponents/CarouselComponents';
+
 const OurWorks = () => {
     const cardImages = [
         {
@@ -35,7 +35,7 @@ const OurWorks = () => {
             <div className="container ">
                 <div className="row my-5">
                     <div className="col-md-12 text-center">
-                        <h2 className="text-white mb-5">Here are our <span >Services</span> </h2>
+                        <h2 className="text-white mb-5">Here are some of our <span >Works</span> </h2>
                         <Carousel   itemsToShow={3} enableAutoPlay={true} >
 
                             {

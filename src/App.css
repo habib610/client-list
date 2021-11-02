@@ -1,152 +1,138 @@
-.common-btn{
+.common-btn {
   background-color: #111430;
   color: white;
   padding: 8px 30px;
 }
-.adminBtn{
+.adminBtn {
   background-color: #009444;
   color: white;
   padding: 8px 30px;
   font-weight: 600;
 }
-.adminBtn:hover{
+.adminBtn:hover {
   background-color: #111430;
   color: white;
 }
-.brand-text{
+.brand-text {
   color: #111430;
 }
-.common-btn:hover{
+.common-btn:hover {
   background-color: #009444;
   color: white;
 }
-.active{
+.active {
   font-weight: 700;
   position: relative;
 }
 
-
-.nav-item{
+.nav-item {
   font-weight: 600;
 }
-.nav-link{
+.nav-link {
   position: relative;
 }
 
 .active > .nav-link::before,
-.nav-link:hover::before{
-  content: '';
+.nav-link:hover::before {
+  content: "";
   width: 100%;
   height: 3px;
   bottom: 0;
   position: absolute;
   left: 0;
   display: block;
-  background-color:#59af59;
+  background-color: #59af59;
 }
-.header-bg{
+.header-bg {
   position: relative;
   margin-bottom: 200px;
 }
-.header-bg::before{
-  content: ""; 
-  width: 100%; 
-  height: 110vh; 
-  position: absolute; 
-  top: -100px; 
-  right: 0; 
-  transform: skewY(-3deg); 
-  background-color: #FBD062;
+.header-bg::before {
+  content: "";
+  width: 100%;
+  height: 110vh;
+  position: absolute;
+  top: -100px;
+  right: 0;
+  transform: skewY(-3deg);
+  background-color: #fbd062;
 }
-.footer{
-  background-color: #FBD062;
+.footer {
+  background-color: #fbd062;
 }
-.card1{
-  /* height: 20px;
-  width: 300px; */
-  transition: all linear 2s;
+
+.services {
+  border: 2px solid rgb(240, 235, 235) !important;
+  transition: all cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.3s;
+}
+.services:hover {
+  box-shadow: 0px 2px 7px 2px #fbd062;
+  /* background-color: #fbd062; */
+  transform: scale(1.1);
+  border: 2px solid white;
+  color: black;
   cursor: pointer;
+  z-index: 10;
 }
-.card1:hover .card-body {
-  animation-name: example;
-  animation-duration: 1.2s;
-  animation-timing-function: ease-out;
-  /* animation-iteration-count: infinite; */
-  animation-delay: .2s;
-  animation-direction: alternate;
-
+h2 {
+  font-weight: 700 !important;
 }
-
-@keyframes example {
-  0%
-  {
-    transform: scale( .80 );
-  }
-  20%
-  {
-    transform: scale( 1 ) ;
-  }
-  40%
-  {
-    transform:  rotateY(-50deg);
-  }
-  60%
-  {
-    transform: scale( .75 );
-  }
-  80%
-  {
-    transform: scale( .90 ) ;
-  }
-  100%
-  {
-    transform: scale( .85 );
-  }
-}
-
-
 /* .card1:hover{
   box-shadow: 10px 10px 51px -13px rgba(0,0,0,0.28);
   transform: scale(1.1);
 } */
-span{
-  color: #7AB259;
+span {
+  color: #7ab259;
 }
-.works{
+.works {
   background-color: #111430;
   height: 100vh;
 }
-.carousel-indicators > li{
+.carousel-indicators > li {
   background-color: red;
   width: 20px;
   height: 20px;
   border-radius: 100%;
 }
-.carouselCard{
-color: wheat;
-width: 100;
-height: 400px;
-margin: 0 20px;
-display: flex;
-justify-content: center;
-align-items: center;
+.carouselCard {
+  color: wheat;
+  width: 100;
+  height: 400px;
+  margin: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.feedback{
+.feedback {
   background-color: #e5e5e5;
   height: 100%;
 }
-.brcpxa{
-  background-color: #FBD062 !important;
+.brcpxa {
+  background-color: #fbd062 !important;
   box-shadow: none !important;
 }
-input[type="file"]{
+input[type="file"] {
   display: none;
 }
-.imageUpload{
-  background-color: #DEFFED;
+.imageUpload {
+  background-color: #deffed;
   padding: 5px 10px;
   color: #009444;
   border-radius: 5px;
   font-weight: 600;
   border: 1px solid #009444;
+}
+
+.puff-container {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.select-box {
+  padding: 10px;
+  width: 100%;
+  outline: none;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
 }

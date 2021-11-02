@@ -1,6 +1,4 @@
-import React from 'react';
-import { useEffect } from 'react';
-import { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import FeedBackCard from '../FeedBackCard/FeedBackCard';
 
 
@@ -25,7 +23,7 @@ const FeedBack = () => {
                         <h2 className="brand-text mb-5">Clients <span>Feedback</span> </h2>
                     </div>
                     {
-                        customerInfo.map(customer => <FeedBackCard info={customer} key={customer.id}></FeedBackCard>)
+                        customerInfo.map(customer => <FeedBackCard info={customer} key={customer._id}></FeedBackCard>)
                     }
                 </div>
             </div>
