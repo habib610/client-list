@@ -33,7 +33,7 @@ const ServiceList = () => {
                     </div>
                        
                     ) : takenService.length === 0 ? (
-                        <h1>Ta</h1>
+                        <h1>You have no service available</h1>
                     ) : (
                         <div className="container">
                             <div className="row">

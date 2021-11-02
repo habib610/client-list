@@ -1,0 +1,13 @@
+[debug] [2021-11-02T19:34:59.705Z] ----------------------------------------------------------------------
+[debug] [2021-11-02T19:34:59.709Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\habib\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2021-11-02T19:34:59.710Z] CLI Version:   9.21.0
+[debug] [2021-11-02T19:34:59.710Z] Platform:      win32
+[debug] [2021-11-02T19:34:59.711Z] Node Version:  v16.9.1
+[debug] [2021-11-02T19:34:59.711Z] Time:          Wed Nov 03 2021 01:34:59 GMT+0600 (Bangladesh Standard Time)
+[debug] [2021-11-02T19:34:59.712Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-11-02T19:34:59.849Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-11-02T19:34:59.849Z] > authorizing via signed-in user (habibur4224287@gmail.com)
+[debug] [2021-11-02T19:34:59.849Z] [iam] checking project creative-agency-b13d4 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2021-11-02T19:34:59.852Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/creative-agency-b13d4:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
